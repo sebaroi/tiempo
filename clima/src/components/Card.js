@@ -43,15 +43,19 @@ var forecastDate9 ='';
         <div className='mt-5'>
             {
                 showData === true ? (
-                    <div className='conteiner'>
+                    <div className='container'>
                         <div className='card mb-3 mx-auto bg-dark text-light'>
                             <div className='row g-0'>
-                                <div className='col-md-4'> 
-                                <h3 className='card-title'>{weather.name}</h3>
-                                <p className='card-date'>{date}</p>
-                                <h1 className='card-temp'>{(weather.main.temp - 273.15).toFixed(1)}°C</h1>
-                                <p className='card-desc'><img src={iconUrl} alt='icono' />{weather.weather[0].description}</p>
-                                <img src='https://images.pexels.com/photos/1980720/pexels-photo-1980720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fuid rounded-start' alt='imagen fondo' />
+                                <div className='col-md-4 '>
+                                     <div className='card-marginLeft'>   
+                                        <h3 className='card-title'>{weather.name}</h3>
+                                        <p className='card-date'>{date}</p>
+                                        <h1 className='card-temp'>{(weather.main.temp - 273.15).toFixed(1)}°C</h1>
+                                        <p className='card-desc'><img src={iconUrl} alt='icono' />{weather.weather[0].description}</p>
+
+                                         {/*  <img src='https://images.pexels.com/photos/1980720/pexels-photo-1980720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fuid rounded-start' alt='imagen fondo' /> */}
+                                       
+                                    </div> 
                                 </div>
                                 <div className='col-md-8'>
                                     <div className='card-body text-start mt-2'>
@@ -61,24 +65,24 @@ var forecastDate9 ='';
                                         <h5 className='card-text'>Humedad: {weather.main.humidity}%</h5>
                                         <h5 className='card-text'>Velocidad del viento: {weather.wind.speed}m/s</h5>
                                     </div>
-                                <hr/>
-                                <div className='row mt-4'>
-                                    <div className='col'>
-                                        <p>{forecastDate3}h</p>
-                                        <p className='description'><img src={iconUrl3} alt='icono tiempo' /> {forecast.list[1].weather[0].description}</p>
-                                        <p className='temp'>{(forecast.list[1].main.temp - 273.15).toFixed(1)}°C</p>
+                                    <hr/>
+                                    <div className='row mt-4'>
+                                        <div className='col'>
+                                            <p>{forecastDate3}hs</p>
+                                            <p className='description'><img src={iconUrl3} alt='icono tiempo' /> {forecast.list[1].weather[0].description}</p>
+                                            <p className='temp'>{(forecast.list[1].main.temp - 273.15).toFixed(1)}°C</p>
+                                        </div>
+                                        <div className='col'>
+                                            <p>{forecastDate6}hs</p>
+                                            <p className='description'><img src={iconUrl6} alt='icono tiempo' /> {forecast.list[2].weather[0].description}</p>
+                                            <p className='temp'>{(forecast.list[2].main.temp - 273.15).toFixed(1)}°C</p>
+                                        </div>
+                                        <div className='col'>
+                                            <p>{forecastDate9}hs</p>
+                                            <p className='description'><img src={iconUrl9} alt='icono tiempo' /> {forecast.list[3].weather[0].description}</p>
+                                            <p className='temp'>{(forecast.list[3].main.temp - 273.15).toFixed(1)}°C</p>
+                                        </div>
                                     </div>
-                                    <div className='col'>
-                                        <p>{forecastDate3}h</p>
-                                        <p className='description'><img src={iconUrl6} alt='icono tiempo' /> {forecast.list[2].weather[0].description}</p>
-                                        <p className='temp'>{(forecast.list[2].main.temp - 273.15).toFixed(1)}°C</p>
-                                    </div>
-                                    <div className='col'>
-                                        <p>{forecastDate3}h</p>
-                                        <p className='description'><img src={iconUrl9} alt='icono tiempo' /> {forecast.list[3].weather[0].description}</p>
-                                        <p className='temp'>{(forecast.list[3].main.temp - 273.15).toFixed(1)}°C</p>
-                                    </div>
-                                </div>
 
                                 </div>
 
